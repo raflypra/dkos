@@ -24,13 +24,149 @@
 
     <include layout="@layout/content_main" />
 
-    <!--<android.support.design.widget.FloatingActionButton-->
-    <!--android:id="@+id/fab"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="bottom|end"-->
-    <!--android:layout_margin="@dimen/fab_margin"-->
-    <!--android:src="@drawable/ic_add_24dp"-->
-    <!--app:layout_behavior="com.raflyprayogo.dkos.Handler.ScrollAwareFABBehavior"/>-->
+    <View
+        android:id="@+id/fade_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.9"
+        android:elevation="5dp"
+        android:visibility="invisible"
+        android:background="#fff"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:elevation="6dp"
+        android:layout_marginBottom="90dp">
+
+        <TextView
+            android:id="@+id/fab1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tabungan"
+            android:textColor="@color/secondary_text"
+            android:visibility="invisible"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:visibility="invisible"
+            app:elevation="6dp"
+            android:layout_gravity="center"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:pressedTranslationZ="12dp"
+            android:src="@drawable/ic_account_balance_wallet_24dp_white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:elevation="6dp"
+        android:layout_marginBottom="160dp">
+
+        <TextView
+            android:id="@+id/fab2_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wishlist"
+            android:textColor="@color/secondary_text"
+            android:visibility="invisible"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            android:src="@drawable/ic_assignment_24dp1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:elevation="6dp"
+        android:layout_marginBottom="230dp">
+
+        <TextView
+            android:id="@+id/fab3_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pengeluaran"
+            android:textColor="@color/secondary_text"
+            android:visibility="invisible"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            android:src="@drawable/ic_trending_down_24dp_white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:elevation="6dp"
+        android:layout_marginBottom="300dp">
+
+        <TextView
+            android:id="@+id/fab4_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pemasukan"
+            android:textColor="@color/secondary_text"
+            android:visibility="invisible"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            android:src="@drawable/ic_trending_up_24dp_white" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_black_24dp_white"
+        app:layout_behavior="com.raflyprayogo.dkos.ScrollAwareFABBehavior"/>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -26,6 +26,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -57,6 +59,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     static final String CONNECTIVITY_CHANGE_ACTION = "android.net.conn.CONNECTIVITY_CHANGE";
     private static final String TAG = "MainActivity";
     private BroadcastReceiver mRegistrationBroadcastReceiver;
+    private FloatingActionButton fab,fab1,fab2,fab3,fab4,fab5;
+    private TextView txtName, txtPosition, fab1_tv,fab2_tv,fab3_tv,fab4_tv, fab5_tv;
+    private View fade_white;
+    private Boolean isFabOpen = false;
+    private Animation fab_open,fab_close,rotate_forward,rotate_backward;
 
     boolean firstBackPressed = false;
 
@@ -115,6 +122,63 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //================ End drawer config ===========================
 
         //================ Start main frame config ================
+
+        fade_white      = (View)findViewById(R.id.fade_white);
+        fab             = (FloatingActionButton)findViewById(R.id.fab);
+        fab1            = (FloatingActionButton)findViewById(R.id.fab1);
+        fab2            = (FloatingActionButton)findViewById(R.id.fab2);
+        fab3            = (FloatingActionButton)findViewById(R.id.fab3);
+        fab4            = (FloatingActionButton)findViewById(R.id.fab4);
+        fab2_tv         = (TextView)findViewById(R.id.fab2_tv);
+        fab1_tv         = (TextView)findViewById(R.id.fab1_tv);
+        fab3_tv         = (TextView)findViewById(R.id.fab3_tv);
+        fab4_tv         = (TextView)findViewById(R.id.fab4_tv);
+        fab_open        = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_open);
+        fab_close       = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fab_close);
+        rotate_forward  = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate_foward);
+        rotate_backward = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate_backward);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                animateFAB();
+            }
+        });
+
+        fade_white.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                animateFAB();
+            }
+        });
+
+        fab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        fab3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        fab4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
         Thread settingTitle = new Thread(){
             @Override
             public void run() {
@@ -377,4 +441,47 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         }
     };
+
+    public void animateFAB(){
+
+        if(isFabOpen){
+
+            fab.startAnimation(rotate_backward);
+            fade_white.setVisibility(View.INVISIBLE);
+            fab1.startAnimation(fab_close);
+            fab2.startAnimation(fab_close);
+            fab3.startAnimation(fab_close);
+            fab4.startAnimation(fab_close);
+            fab2_tv.startAnimation(fab_close);
+            fab1_tv.startAnimation(fab_close);
+            fab3_tv.startAnimation(fab_close);
+            fab4_tv.startAnimation(fab_close);
+            fab1.setClickable(false);
+            fab2.setClickable(false);
+            fab3.setClickable(false);
+            fab4.setClickable(false);
+            isFabOpen = false;
+            Log.d("Raj", "close");
+
+        } else {
+
+            fab.startAnimation(rotate_forward);
+            fade_white.setVisibility(View.VISIBLE);
+            fab1.startAnimation(fab_open);
+            fab2.startAnimation(fab_open);
+            fab3.startAnimation(fab_open);
+            fab4.startAnimation(fab_open);
+            fab2_tv.startAnimation(fab_open);
+            fab1_tv.startAnimation(fab_open);
+            fab3_tv.startAnimation(fab_open);
+            fab4_tv.startAnimation(fab_open);
+            fab1.setClickable(true);
+            fab2.setClickable(true);
+            fab3.setClickable(true);
+            fab4.setClickable(true);
+            isFabOpen = true;
+            Log.d("Raj","open");
+
+        }
+    }
 }

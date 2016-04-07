@@ -10,6 +10,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 
 public class SQLiteHandler extends SQLiteOpenHelper {
@@ -122,19 +126,26 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     }
 
     //    ======================================== EXPENSE
-//    public void addExpense() {
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        ContentValues values = new ContentValues();
-//
-//        values.put(ts.EXPENSE_TITLE, name);
-//        values.put(ts.EXPENSE_DESC, name);
-//        values.put(ts.EXPENSE_COST, name);
-//        values.put(ts.EXPENSE_ISBIG, name);
-//        values.put(ts.EXPENSE_STATUS, "1");
-//        values.put(ts.EXPENSE_CD, name);
-//
-//        long id = db.insert(ts.TABLE_EXPENSE, null, values);
-//        db.close();
-//    }
+    public void addExpense(String title, String desc, String cost, String isbig) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        Date date = Calendar.getInstance().getTime();
+        //
+        // Display a date in day, month, year format
+        //
+        DateFormat formatter = new SimpleDateFormat("yyyy-mm-dd hh:ii:ss");
+        String cd = formatter.format(date);
+
+        values.put(ts.EXPENSE_TITLE, title);
+        values.put(ts.EXPENSE_DESC, desc);
+        values.put(ts.EXPENSE_COST, cost);
+        values.put(ts.EXPENSE_ISBIG, isbig);
+        values.put(ts.EXPENSE_STATUS, "1");
+        values.put(ts.EXPENSE_CD, cd);
+
+        long id = db.insert(ts.TABLE_EXPENSE, null, values);
+        db.close();
+    }
 
 }
