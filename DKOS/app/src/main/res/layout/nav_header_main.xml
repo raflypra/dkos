@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:scaleType="centerCrop"
+    android:background="@color/colorPrimary"
+    android:gravity="bottom"
+    android:id="@+id/ldrawernav"
+    tools:context="com.raflyprayogo.dkos.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ImageView
+        android:id="@+id/drawer_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:alpha="0.7"/>
+
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_marginTop="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/default_profile" />
+
+    <RelativeLayout
+        android:layout_below="@id/imgUser"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/textUserNumber"
+            android:text="Another Info"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textUser"
+            android:layout_width="wrap_content"
+            android:textColor="#eee"
+            android:textSize="12sp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/edit_user"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

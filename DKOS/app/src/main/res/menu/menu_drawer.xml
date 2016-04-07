@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard_24dp"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_feeds"
+            android:icon="@drawable/ic_public_24dp"
+            android:title="Feed" />
+        <item
+            android:id="@+id/nav_income"
+            android:icon="@drawable/ic_trending_up_24dp"
+            android:title="Pemasukan" />
+        <item
+            android:id="@+id/nav_expense"
+            android:icon="@drawable/ic_trending_down_24dp"
+            android:title="Pengeluaran" />
+        <item
+            android:id="@+id/nav_wishlist"
+            android:icon="@drawable/ic_assignment_24dp"
+            android:title="Wishlist Belanja" />
+        <item
+            android:id="@+id/nav_forum"
+            android:icon="@drawable/ic_group_24dp"
+            android:title="Forum" />
+        <item
+            android:id="@+id/nav_savings"
+            android:icon="@drawable/ic_account_balance_wallet_24dp"
+            android:title="Tabungan" />
+        <item
+            android:id="@+id/nav_logmonth"
+            android:icon="@drawable/ic_poll_24dp"
+            android:title="Log Bulanan" />
+    </group>
+
+    <group android:id="@+id/menu_group_2">
+        <item
+            android:id="@+id/nav_connection"
+            android:title="Cek Koneksi" />
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Log Out" />
+    </group>
+
+</menu>

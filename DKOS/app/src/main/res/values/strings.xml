@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">DKOS</string>
+    <string name="action_settings">Pengaturan</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_login">Login Activity</string>
+    <string name="title_activity_edit_user">Edit User</string>
+    <string name="not_connected">Tidak bisa terhubung ke Internet</string>
+    <string name="no_connection">Tidak ada koneksi!</string>
+    <string name="retry">COBA LAGI</string>
+    <string name="wrong_password">Username atau password salah</string>
+    <string name="empty_login">Username atau password kosong</string>
+    <string name="double_login">Anda sudah login di perangkat lain</string>
+    <string name="nodata">Tidak ada data</string>
+    <string name="errdata">Tidak ada koneksi</string>
+    <string name="yes">Ya</string>
+    <string name="cancel">Batal</string>
+    <string name="logout">Anda yakin akan keluar?</string>
+    <string name="login">Mohon tunggu ...</string>
+    <string name="exit_app">Tekan lagi untuk keluar</string>
+    <!--<string name="not_connected">Tidak bisa terhubung ke Internet</string>-->
+    <!--<string name="wrong_password">Email atau password salah</string>-->
+    <!--<string name="empty_login">Email atau password salah</string>-->
+    <!--<string name="double_login">Anda sudah login di perangkat lain</string>-->
+    <!--<string name="nodata">Tidak ada data</string>-->
+    <!--<string name="errdata">Koneksi terputus</string>-->
+</resources>
